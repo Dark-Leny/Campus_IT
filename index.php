@@ -69,7 +69,7 @@ $comparaison = $pdo->query($sql_res)->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div id="Comparaisons-ressources" class="tabcontent">
-      <h3>Comparaison par type de ressource</h3>
+      <h3>Comparaison Stockage vs Réseau</h3>
       <ul>
           <?php foreach($comparaison as $c): ?>
               <li><strong><?= $c['nom'] ?> :</strong> <?= number_format($c['total'], 2) ?> <?= $c['unite'] ?></li>
