@@ -37,11 +37,11 @@
             // on récupère les données php en JSON
             var traverseesData = <?php echo json_encode($traversees); ?>;
             console.log(traverseesData);
-            var jours = [];
+            var mois = [];
             var nombres = [];
             // on parcourt les données pour les mettre dans des tableaux distincts jours et nombres
             for (var i in traverseesData) {
-                jours.push(traverseesData[i].day);
+                mois.push(traverseesData[i].month);
                 nombres.push(traverseesData[i].nb);
             }
             console.log(jours);
@@ -49,9 +49,9 @@
 
             // on fabrique à partir des tableaux jours et nombres la structure de données attendue par Chart.js pour un graphique en lignes
             var chartdata = {
-                labels: jours,
+                labels: mois,
                 datasets: [{
-                    label: 'nb de traversées par jour en septembre 2022',
+                    label: 'Total (unités cumulées)',
                     borderColor: 'rgb(75, 192, 192)',
                     data: nombres
                 }]
