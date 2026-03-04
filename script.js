@@ -13,7 +13,7 @@ function openTab(evt, tabName) {
 }
 
 // Initialisation du graphique avec les données venant de l'index.php
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   const ctx = document.getElementById("evolutionChart").getContext("2d");
 
   new Chart(ctx, {
