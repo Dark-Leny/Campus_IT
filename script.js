@@ -1,3 +1,4 @@
+// fonction pour les boutons des rubriques
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
