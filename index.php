@@ -52,7 +52,7 @@ $comparaison = $pdo->query($sql_res)->fetchAll(PDO::FETCH_ASSOC);
       <table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
           <tr style="background-color: #eee;">
               <th>Application</th>
-              <th>Consommation (Go/unités)</th>
+              <th>Total (unités cumulées)</th>
           </tr>
           <?php foreach($top_apps as $app): ?>
           <tr>
