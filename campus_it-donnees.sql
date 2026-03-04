@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS `application`;
 CREATE TABLE IF NOT EXISTS `application` (
   `app_id` int(1) UNSIGNED NOT NULL,
   `nom` varchar(80) NOT NULL,
-  PRIMARY KEY (`app_id`),
+  PRIMARY KEY (`app_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -58,9 +58,9 @@ CREATE TABLE IF NOT EXISTS `consommation` (
   `res_id` int(1) NOT NULL,
   `mois` date NOT NULL,
   `volume` decimal(2) NOT NULL,
-  PRIMARY KEY (`conso_id`),
-  FOREIGN KEY (`app_id`)
-  FOREIGN KEY (`res_id`)
+  PRIMARY KEY (`conso_id`)
+  FOREIGN KEY (`app_id`) REFERENCES `application`(`app_id`)
+  FOREIGN KEY (`res_id`) REFERENCES `ressource`(`res_id`)
   CREATE INDEX index1 ON `consommation` (`mois`)
   CREATE INDEX index2 ON `consommation` (`app_id`)
   CREATE INDEX index3 ON `consommation` (`volume`)
@@ -417,7 +417,7 @@ CREATE TABLE IF NOT EXISTS `ressource` (
   `res_id` int(1) UNSIGNED NOT NULL,
   `nom` varchar(30) NOT NULL,
   `unite` varchar(10) NOT NULL,
-  PRIMARY KEY (`res_id`),
+  PRIMARY KEY (`res_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
