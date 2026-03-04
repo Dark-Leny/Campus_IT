@@ -61,9 +61,9 @@ CREATE TABLE IF NOT EXISTS `consommation` (
   PRIMARY KEY (`conso_id`),
   FOREIGN KEY (`app_id`)
   FOREIGN KEY (`res_id`)
-  CREATE UNIQUE INDEX index1 ON `consommation` (`mois`)
-  CREATE UNIQUE INDEX index2 ON `consommation` (`app_id`)
-  CREATE UNIQUE INDEX index3 ON `consommation` (`volume`)
+  CREATE INDEX index1 ON `consommation` (`mois`)
+  CREATE INDEX index2 ON `consommation` (`app_id`)
+  CREATE INDEX index3 ON `consommation` (`volume`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
