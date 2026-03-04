@@ -51,7 +51,7 @@ INSERT INTO `application` (`app_id`, `nom`) VALUES
 -- Structure de la table `consommation`
 --
 
-DROP TABLE IF EXISTS `comsommation`;
+DROP TABLE IF EXISTS `consommation`;
 CREATE TABLE IF NOT EXISTS `consommation` (
   `conso_id` int(1) UNSIGNED NOT NULL,
   `app_id` int(1) NOT NULL,
